@@ -10,9 +10,9 @@ public class Fcfs {
 		int start[]=new int[arrival_time.length];
 
 		wait[0]=0;                                          //first process waiting time is 0
-	    start[0]=arrival_time[0];
-	    finish[0]= Job_size[0];
-	    for(int i=1;i<arrival_time.length;i++)
+	        start[0]=arrival_time[0];
+	        finish[0]= Job_size[0];
+	        for(int i=1;i<arrival_time.length;i++)
 		{
 			wait[i]=finish[i-1]-arrival_time[i]+1;      //waiting time of ith is finish time of 
 			                                            //(i-1)th -arrival time of ith process 
@@ -26,16 +26,16 @@ public class Fcfs {
 				start[i]=finish[i-1]+1;
 			}
 		    finish[i]=start[i]+Job_size[i]-1;	
-	    }
-	    int[][] output =new int[arrival_time.length][5];
-	    for(int i=0;i<arrival_time.length;i++)
-	    {
-	    	output[i][0]=i+1;
-	    	output[i][1]=arrival_time[i];
-	    	output[i][2]=wait[i];
-	    	output[i][3]=start[i];
-	    	output[i][4]=finish[i];
-	    }
-	    return output;
+	       }
+	       int[][] output =new int[arrival_time.length][5];
+	       for(int i=0;i<arrival_time.length;i++)
+	       {
+		    output[i][0]=i+1;
+		    output[i][1]=arrival_time[i];
+		    output[i][2]=wait[i];
+		    output[i][3]=start[i];
+		    output[i][4]=finish[i];
+	       }
+	       return output;
 	}
 }
