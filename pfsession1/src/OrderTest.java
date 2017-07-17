@@ -22,7 +22,7 @@ public class OrderTest {
              int status2=o.checkOrder(arr2);
              assertEquals(0,status2);
 	}
-	@Test (expected = ArrayIndexOutOfBoundsException.class)
+	@Test 
 	public void testCheckOrder3() {
 	     Order o=new Order();
 	     int[] arr2={11,9,13,3,2,1};
