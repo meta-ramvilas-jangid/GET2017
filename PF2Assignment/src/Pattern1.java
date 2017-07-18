@@ -10,14 +10,12 @@ public class Pattern1{
     		return null;    //particular row not present in this pattern
     	}
 	String pattern="";
-    	if(row<n){
-    		for(int i=0; i<(n-row); i++){
-    			pattern=pattern+" ";
-    		}
-    	}else{
-    		for(int i=0; i<(row-n); i++){
-    			pattern=pattern+" ";
-    		}
+	int expresion=n-row;
+    	if(expresion<0){
+    		expresion*=-1;
+    	}
+    	for(int i=0; i<expresion; i++){
+    		pattern=pattern+" ";
     	}
     	return pattern;	
     }
@@ -35,32 +33,23 @@ public class Pattern1{
     	String pattern="";
     	int count=1;
 	boolean flag=true;
-    	if(row<=n){
-    		for(int i=0; i<2*(row)-1; i++){
-    			pattern=pattern+count;
-    			if(count>=row && flag){
-    				flag=false;
-    			}
-    			if(flag){
-    				count++;
-    			}else{
-    				count--;
-    			}
-    		}
-    	}else{
-    		for(int i=0; i<2*(total_col-row+1)-1; i++){
-    			pattern=pattern+count;
-    			if(count>=(total_col-row+1) && flag){
-    				flag=false;
-    			}
-    			if(flag){
-    				count++;
-    			}else{
-    				count--;
-    			}
-    		}
-    	}
-    	return pattern;	
+	int expresion1=1;
+	if(row>n){
+    		row=total_col-row+1;
+        }
+    	expresion1=2*row-1;
+    	for(int i=0; i<expresion1; i++){
+		pattern=pattern+count;
+		if(count>=row && flag){
+			flag=false;
+		}
+		if(flag){
+			count++;
+		}else{
+			count--;
+		}
+	}    
+	return pattern;	
     }
     /**
     * print function take one argument
