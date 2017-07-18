@@ -1,4 +1,10 @@
-public class Pattern1 {
+public class Pattern1{
+    /**
+    * space method take two arguments
+    * @param row particular row in pattern
+    * @param n maximum numeric value
+    * @return string of space
+    */	
     String space(int row, int n){
     	String pattern="";
     	if(row<n){
@@ -12,6 +18,12 @@ public class Pattern1 {
     	}
     	return pattern;	
     }
+    /**
+    * numeric function take 2 arguments
+    * @param row particular row in pattern 
+    * @param n maximum numeric value in pyramind
+    * @return String of numbers
+    */	
     String number(int row, int n){   	
     	int total_col=2*n-1;
     	String pattern="";
@@ -44,6 +56,11 @@ public class Pattern1 {
     	}
     	return pattern;	
     }
+    /**
+    * print function take one argument
+    * @param n maximum numeric value of pattern
+    * @return String array that contain every row of pattern
+    */	
     String[] print(int n){
     	int total_row=2*n-1;
     	String pattern[]=new String[total_row];
