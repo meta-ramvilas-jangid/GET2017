@@ -6,7 +6,10 @@ public class Pattern1{
     * @return string of space
     */	
     String space(int row, int n){
-    	String pattern="";
+    	if(row>(2*n-1)){
+    		return null;    //particular row not present in this pattern
+    	}
+	String pattern="";
     	if(row<n){
     		for(int i=0; i<(n-row); i++){
     			pattern=pattern+" ";
@@ -26,9 +29,12 @@ public class Pattern1{
     */	
     String number(int row, int n){   	
     	int total_col=2*n-1;
+	if(row>total_col){
+               return null;    //particular row not present in this pattern
+    	}
     	String pattern="";
     	int count=1;
-		boolean flag=true;
+	boolean flag=true;
     	if(row<=n){
     		for(int i=0; i<2*(row)-1; i++){
     			pattern=pattern+count;
