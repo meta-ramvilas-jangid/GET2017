@@ -1,8 +1,8 @@
 public class GratestCommonDivisor {
 	/**
-	 * @param x is disior
-	 * @param y is divident
-	 * @return gratest common divisior of x and y
+	 * @param x is divisor
+	 * @param y is dividend
+	 * @return gratest common divisor of x and y
 	 */
 	int gcd(int x, int y){
 		if(x<=0 || y<=0){
