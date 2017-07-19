@@ -1,8 +1,8 @@
 public class Reminder {
 	/**
 	 * @param x divisor
-	 * @param y divident
-	 * @return  remainder of x and y as x%y
+	 * @param y dividend
+	 * @return  reminder of x and y as x%y
 	 */
 	int rem(int x, int y){
 		if(y<=0 || x<0){
