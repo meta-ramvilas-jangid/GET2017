@@ -8,75 +8,123 @@ import java.util.List;
 import java.util.StringTokenizer;
 
 public class OrderLevelPromotions implements Promotions {
-	List<OrderLevelPromotions> orderLevel;
-	boolean amountType = false;
-	boolean percentageType = false;
-	double discount = 0.0;
-	double discountOnAmount = 0.0;
+	private List<OrderLevelPromotions> orderLevel;													
+	private boolean amountType = false;																
+	private boolean percentageType = false;															
+	private double discount = 0.0;																	
+	private double discountOnAmount = 0.0;
+	/**
+	 * constructor to initialize 
+	 * a list of promotions
+	 */
 	public OrderLevelPromotions() throws IOException {
 
 		orderLevel = new ArrayList<OrderLevelPromotions>();
 		FileReader orderPromoFile = null;
 		BufferedReader readOrderPromo = null;
-		try{
+		try {
 			orderPromoFile = new FileReader("OrderPromo.csv");
 			readOrderPromo = new BufferedReader(orderPromoFile);
 			String orderPromoEntry = null;
-			while((orderPromoEntry = readOrderPromo.readLine())!=null){
+			while ((orderPromoEntry = readOrderPromo.readLine()) != null) {
 				orderLevel.add(new OrderLevelPromotions(orderPromoEntry));
 			}
-		}catch(IOException e){
+		} catch (IOException e) {
 			System.out.println("File Exception Occured");
-		}finally{
+		} finally {
 			orderPromoFile.close();
 			readOrderPromo.close();
 		}
 	}
-	public OrderLevelPromotions(String promo){
-		StringTokenizer promoEntryTokenizer = new StringTokenizer(promo,",");
-		if(promoEntryTokenizer.hasMoreElements() && promoEntryTokenizer.nextToken().equals("OrderFixedAmountPromotion")){
+         /**
+	 * constructor to initialize 
+	 * a single promo
+	 */
+	public OrderLevelPromotions(String promo) {
+		StringTokenizer promoEntryTokenizer = new StringTokenizer(promo, ",");
+		if (promoEntryTokenizer.hasMoreElements()
+				&& promoEntryTokenizer.nextToken().equals(
+						"OrderFixedAmountPromotion")) {
 			amountType = true;
-		}else{
+		} else {
 			percentageType = true;
 		}
 		discount = Double.parseDouble(promoEntryTokenizer.nextToken());
 		discountOnAmount = Double.parseDouble(promoEntryTokenizer.nextToken());
-		
-		
 	}
-	public void displayOrderLevelPromo(){
-		for(OrderLevelPromotions p :orderLevel){
-			if(p.amountType){
-				System.out.println("type - fixedAmount");
-			}else if(p.percentageType){
-				System.out.println("type - fixedPercent");
+	/**
+	 * display all promo codes valid
+	 */
+	public void displayOrderLevelPromo() {
+		System.out.println();
+		System.out.println("order level promotions");
+		System.out.println("###################################");
+		System.out.println("type\t\tdiscount\tabove order value");
+		String discount = null;
+		for (OrderLevelPromotions p : orderLevel) {
+			discount = "";
+			discount = discount + p.discount;
+			if (p.amountType) {
+				System.out.print("fixedAmount\t");
+				discount = "Rs " + discount;
+			} else if (p.percentageType) {
+				System.out.print("fixedPercent\t");
+				discount += " %\t";
 			}
-			System.out.println("Discount - "+p.discount);
-			System.out.println("Discount on - "+p.discountOnAmount);
+			System.out.print(discount + "\t\t");
+			System.out.print(p.discountOnAmount);
+			System.out.println();
 		}
 	}
+
 	@Override
-	public boolean isApplicable(String productAmount) {
-		// TODO Auto-generated method stub
-		double value = Double.parseDouble(productAmount);
+	public boolean isApplicable(String orderValue) {
+		double value = Double.parseDouble(orderValue);
 		if (value > discountOnAmount) {
 			return true;
 		}
 		return false;
-	
 	}
 
 	@Override
 	public double getDiscount(double amount, double discount) {
-		// TODO Auto-generated method stub
-		if(percentageType){
-			return (amount*discount)/100;
+		if (amountType) {
+			return discount;
+		} else if (percentageType) {
+			return (amount * discount) / 100;
 		}
-		return discount;
+		return 0;
 	}
-
-	public static void main(String[] args) throws IOException{
-		OrderLevelPromotions o= new OrderLevelPromotions();
-		o.displayOrderLevelPromo();
+	/**
+	 *method to get total product discount
+	 * and display on the console
+	 */
+	public double getTotalOrderDiscount(double netProductAmount) {
+		double maxOrderDiscount = 0;
+		double totalOrderDiscount = 0;
+		double maxApplicableDiscount = 0;
+		String discountType = "Rs 0";
+		for (OrderLevelPromotions o : orderLevel) {
+			if (o.isApplicable(String.valueOf(netProductAmount))) {
+				discountType = "";
+				totalOrderDiscount = o
+						.getDiscount(netProductAmount, o.discount);
+				if (totalOrderDiscount > maxOrderDiscount) {
+					if (o.amountType) {
+						discountType = "Rs " + o.discount;
+					} else {
+						discountType = o.discount + "%";
+					}
+					maxOrderDiscount = totalOrderDiscount;
+					maxApplicableDiscount = o.discountOnAmount;
+				}
+			}
+		}
+		System.out.print("Promotions Applied : ");
+		System.out.println(discountType + " off on orders above "
+				+ maxApplicableDiscount);
+		// System.out.println("quantity "+orderMap.get(pro));
+		System.out.println("Discount Rs" + maxOrderDiscount);
+		return maxOrderDiscount;
 	}
 }
