@@ -1,3 +1,0 @@
-MetaA|meta@a.com|1112223334|A
-MetaB|meta@b.com|5556667778|B
-MetaC|meta@c.com|5556667778|C
