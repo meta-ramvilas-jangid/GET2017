@@ -1,17 +1,15 @@
+public interface Node {
+	
+	public void createNode(User obj, String name, String id);
 
-
-import java.util.HashSet;
-public class Node implements Record {
-
-    /**
-     * Friends Set of entity
-     */
-    public HashSet<Entity> friends = new HashSet<>();
-
-    /**
-     * Method to print Record of entities
-     */
-    @Override
-    public void getRecord() {
-    }
+	public void createNode(Organization obj, String name, String id);
+		
+	public void addNode(Entity obj);
+	
+	public boolean checkNode(String id);
+	
+	public void editNode(String id,String name);
+	
+	public void deleteNode(String id);
+	
 }
