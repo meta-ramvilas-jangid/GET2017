@@ -8,7 +8,7 @@ public class SocialNetwork {
 		String file = obj.read("Users.txt"); // read all the information of
 												// users
 		Graph node = new Graph(file);
-		file = obj.read("Connections.txt"); // read connections of user
+		file = obj.read("Connection.txt"); // read connections of user
 		Connection con = new Connection(file);
 		do {
 			System.out.println("\n1. Login");
@@ -43,7 +43,7 @@ public class SocialNetwork {
 					switch (input) {
 					case 1:
 						System.out.println("Edit your name");
-						name = scan.next();
+						name = new Scanner(System.in).nextLine();
 						node.editNode(userId, name);
 						break;
 					case 2:
@@ -52,17 +52,17 @@ public class SocialNetwork {
 						break;
 					case 3:
 						System.out.println("Add id of your record");
-						String recordId = scan.next();
+						String recordId = new Scanner(System.in).nextLine();
 						System.out.println("Add title of your record");
-						name = scan.next();
+						name = new Scanner(System.in).nextLine();
 						System.out.println("Add content of record");
-						String content = scan.next();
+						String content = new Scanner(System.in).nextLine();
 						record.createRecord(recordId, userId, content, name);
 						break;
 					case 4:
 						System.out
 								.println("Enter id of record you want to delete");
-						recordId = scan.next();
+						recordId = new Scanner(System.in).nextLine();
 						record.deleteRecord(recordId, userId);
 						break;
 					case 5:
@@ -71,7 +71,7 @@ public class SocialNetwork {
 					case 6:
 						System.out
 								.println("Enter id of the connection you want to add as a friend");
-						String friendId = scan.next();
+						String friendId = new Scanner(System.in).nextLine();;
 						if (node.checkNode(friendId)) {
 							con.addConnection(friendId, userId);
 						} else {
@@ -81,7 +81,7 @@ public class SocialNetwork {
 					case 7:
 						System.out
 								.println("Enter id of the connection you want to remove as a friend");
-						friendId = scan.next();
+						friendId = new Scanner(System.in).nextLine();;
 						if (node.checkNode(friendId)) {
 							con.removeConnection(friendId, userId);
 						} else {
@@ -107,9 +107,9 @@ public class SocialNetwork {
 				switch (input) {
 				case 1:
 					System.out.println("enter your name ");
-					name = scan.next();
+					name = new Scanner(System.in).nextLine();;
 					System.out.println("enter a userID ");
-					userId = scan.next();
+					userId = new Scanner(System.in).nextLine();;
 					if (node.checkNode(userId)) {
 						System.out.println("User Already exist");
 					} else {
@@ -118,9 +118,9 @@ public class SocialNetwork {
 					break;
 				case 2:
 					System.out.println("enter name of organization ");
-					name = scan.next();
+					name = new Scanner(System.in).nextLine();;
 					System.out.println("enter a userID ");
-					userId = scan.next();
+					userId = new Scanner(System.in).nextLine();;
 					if (node.checkNode(userId)) {
 						System.out.println("User Already exist");
 					} else {
