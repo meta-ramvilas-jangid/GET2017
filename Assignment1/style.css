@@ -1,0 +1,57 @@
+.body{
+background:#FFFFFF;
+margin:auto;
+
+}
+
+.outer{
+width:1000px;
+border-top:#999999 solid 20px ;
+border-bottom:#999999 solid 10px;
+border-left:#999999 solid 10px;
+border-right:#999999 solid 10px;
+background-color:#FFFFFF;
+margin:auto;
+}
+
+.header_div
+{ 
+border:solid 3px #0099CC;
+ width:974px;
+ margin: 10px;
+ height:80px;
+ 
+ 
+ background-color:#33CCFF
+
+ 
+}
+.myProfile{
+margin-top:30px;
+padding-left:20px;
+}
+.mid
+{
+margin-top:10px;
+ width:1030px;
+ height:600px;
+ margin:auto;
+ 
+}
+.mid_left
+{
+ width:180px;
+ margin:10px;
+ padding-left:5px;
+ height:200px;
+ background-color:#000000;
+ border:5px #CCCCCC solid;
+ float:left
+}
+.mid_right
+{
+margin-left:30px;
+padding-left:100px;
+ width:650px;
+ float:left
+ }
