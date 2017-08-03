@@ -1,0 +1,15 @@
+/* CSS Document */
+
+
+*{
+	margin: auto;
+}
+.outer{
+	width: 90%;
+	height: 1000px;
+	margin:auto;
+}
+.upper{
+	height: 70%;
+	margin:auto;
+}
