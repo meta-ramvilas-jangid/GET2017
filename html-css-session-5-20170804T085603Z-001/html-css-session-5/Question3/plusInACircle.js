@@ -1,0 +1,14 @@
+var c = document.getElementById("myCanvas6");
+var ctx = c.getContext("2d");
+ctx.fillStyle = "#0033CC";
+ctx.beginPath();
+ctx.arc(50, 50, 50, 0, 2 * Math.PI);
+ctx.fill();
+ctx.beginPath();
+ctx.rect(40,4,20,92);
+ctx.fillStyle = "white";
+ctx.fill();
+ctx.beginPath();
+ctx.rect(4,40,92,20);
+ctx.fillStyle = "white";
+ctx.fill();

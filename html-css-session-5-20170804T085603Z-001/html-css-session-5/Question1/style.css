@@ -1,0 +1,158 @@
+*{
+	margin:auto;
+}
+.outer{
+	 background-color:#CACFD2;  
+	 width:80%;
+	 height:100%;
+}
+.header{
+	height:7%;
+	padding-top:10px;
+	padding-left:20px;
+	font-size:24px;
+	line-height:50px;
+	color:#000033;
+	font-weight:bold;
+}
+.mid{
+	height:87.8%;
+	margin-top: 10px;
+	padding-top:25px;
+	 background-color:#CACFD2;
+}
+.head{
+	height:30px;
+	padding-top:0px;
+	margin-top:0px;
+	 background-color:#CACFD2;
+	padding-left:20px;
+	clear:both;
+	margin-bottom: 10px;
+
+}
+.head_left{
+	width:30%;
+	text-align:right;
+	margin-left:120px;
+	 background-color:#CACFD2;
+	line-height:28px;
+	float:left;
+}
+.head_mid{
+	  width: 30px;
+	  margin-left:20px;
+	  float: left;
+	  border-radius: 5px 0px 0px 5px;
+	  background:#eeeeee;
+	  height:32px;
+
+	  /*position: relative;
+	  */
+	  text-align: center;
+	  line-height:36px;
+}
+.head_right{
+border-radius: 0px 5px 5px 0px;
+  border: 2px solid #ECF0F1  ; 
+  margin-bottom: 9px;
+  
+  height: 28px;
+  float: left;
+  padding: 0px 0px;
+
+}
+.head_radio{
+height:45px;
+	padding-top:0px;
+	margin-top:0px;
+	 background-color:#CACFD2;
+	padding-left:20px;
+	clear:both;
+	margin-bottom: 0px;
+}
+.head_right_radio{
+      width: 100px;
+	  margin-left:20px;
+	  float: left;
+	  height:45px;
+	  /*position: relative;
+	  */
+	  text-align: left;
+	  
+}
+.head_area{
+    height:50px;
+	padding-top:0px;
+	margin-top:0px;
+	 background-color:#CACFD2;
+	padding-left:20px;
+	clear:both;
+	margin-bottom: 10px;
+}
+.head_mid_area{
+      width: 30px;
+	  margin-left:20px;
+	  float: left;
+	  border-radius: 5px 0px 0px 5px;
+	  background:#eeeeee;
+	  height:40px;
+	  /*position: relative;
+	  */
+	  text-align: center;
+	  line-height:40px;
+}
+.head_right_area{
+      width: 201px;
+	  
+	  float: left;
+	  height:50px;
+	  /*position: relative;
+	  */
+	  border-radius: 0px 5px 5px 0px;
+      border: 2px solid #ECF0F1  ; 
+
+	  	  
+}
+.validation {
+  display:none;
+  margin: 0 0 10px;
+  font-weight:400;
+  font-size:13px;
+  color: #DE5959;
+}
+input[type=text],input[type=email]{
+    width:200px;
+	height:28px;
+}
+input[type=text]:valid{
+    color: green;
+    border-radius: 0px 5px 5px 0px;
+  border: 2px solid #ECF0F1  ; 
+}
+
+
+input[type=email]:valid{
+    color: green;
+}
+/* Unmatched */
+input[type=text]:invalid,input[type=email]:invalid {
+    color: red;
+    border-radius: 0px 5px 5px 0px;
+  border: 2px solid #ECF0F1  ; 
+
+}
+
+
+
+select{
+width:200px;
+	height:28px;
+	  border-radius: 0px 5px 5px 0px;
+  border: 2px solid #ECF0F1  ; 	
+}
+input[type=submit]{
+padding-top: 20px;
+ width:200px;
+height:28px;
+}
