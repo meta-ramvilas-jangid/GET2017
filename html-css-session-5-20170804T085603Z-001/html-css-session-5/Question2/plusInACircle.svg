@@ -1,0 +1,5 @@
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="100px" height="100px">
+		<circle cx="50" cy="50" r="50" fill="#001933"/>
+		<path d="M 44 4, L 56 4, L 56 44, L 96 44, L 96 56, L 56 56, L 56 96, L 44 96, L 44 56, L 4 56, L 4 44, L 44 44, L 44 4" style = "fill: white"/>
+</svg>
