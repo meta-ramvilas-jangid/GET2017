@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo">Click the button to change the text in this paragraph.</p>
+
+<form>
+		    <input type="text" placeholder="Enter to save" name="name" value="" id="n"></br>
+			<input type="button"  value="save" onClick="save()">
+	</br></br></br></br>
+<input type="button"  value="get value" onClick="myFunction()">
+	
+
+</form>
+
+
+<script>
+function myFunction() {
+    var demo=document.getElementById("demo");
+    demo.innerHTML = localStorage.getItem("lastname");
+    var p=demo.innerHTML;
+    alert(p);
+
+    }
+function save(){
+   var x=document.getElementById('n');
+   localStorage.setItem("lastname",x.value);
+   x="";
+} 
+</script>
+
+</body>
+</html>
