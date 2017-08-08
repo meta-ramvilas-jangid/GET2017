@@ -1,0 +1,119 @@
+<html>
+<head>
+  <script type="text/javascript" src="location.js"></script>
+</head> 
+<body>
+  <center>
+
+    <table  name="header" style="border-bottom:1px solid;padding-top:10px " width=900px >
+      <tr>
+        <td><img src="html5-1920x1200.png" width="200px">
+   
+        </td>
+        <td width=400px></td>
+  
+        <td>
+          <nav>
+              <a id="index" href="" onclick="getIndex()" ="index.html">Home</a> &nbsp;
+              <a id="contact" href="" onclick="getContact()">Contact</a> &nbsp;
+              <a href="#">About</a> &nbsp;
+              <a href="#">Gallery</a>&nbsp;
+              
+          </nav>
+        </td>
+      </tr>
+    </table>
+    <img src="contact_us_banner1.jpg" width="700">
+    </br></br>
+    <form>
+    <table>
+
+      <tr>
+         <td>
+          <label >Name </label>
+         </td>	
+         <td>
+          <input  type="text" name="name" id="name" onkeyup="nameValidation()" >
+         </td>
+         <td style="width: 100px;">
+          <p id="msg"></p> 
+         </td>
+      </tr>
+         
+      <tr>
+         <td >
+          <label >Email</label>
+         </td>
+         <td>
+          <input  type="Email" name="email" id="email" onkeyup="emailValidation()">
+         </td>
+        <td> <span id="emailMsg"></span> 
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label>city</label>
+        </td>
+        <td >
+          <select id="city" onchange="chooseCity()">
+              <option selected disabled>Choose here</option>
+              <option>ajmer</option>
+              <option>jaipur</option>
+              <option>jodhpur</option>
+              <option>kota</option>
+          </select>
+        </td>
+
+        <td style="width: 100px;">
+            <label style="visibility: hidden;" class="cityMsg">Your selected city:</label>
+            <span style="visibility: hidden;" ><input type="text" class="cityMsg" id="selectedMsg"  disabled></span>
+        </td>
+         
+      </tr>
+      <tr>
+        <td>
+          <label>Organization </br>name</label>
+        </td>
+        <td >
+          <input  type="text" id="org" onkeyup="orgValidation()" >
+        </td>
+        <td >
+          <span id="orgMsg"></span>
+        </td>
+      </tr>
+      <tr>
+      <tr>
+          <td>
+          <label>Conact</br> Number </label>
+          </td>
+          <td>
+          <input type="text" id="mob" onkeyup="mobValidation()">
+          </td>
+          <td>
+            <p id="mobMsg"></p>
+          </td>
+      </tr>
+      <tr>
+          <td>
+          <label>Message</label>
+          </td>
+          <td>
+          <textarea  name="comments" id="message" maxlength="1000" cols="25" rows="3" onkeyup="messageValidation()"></textarea>
+         </td>
+         <td style="width: 100px;">
+          <p id="messageMsg"></p> 
+         </td>
+      </tr>
+      <tr>
+         <td colspan="2">
+          <input type="submit">   
+         </td>
+      </tr>
+    </table>
+    </form>
+    <table style="border-bottom:1px solid" width="800px">
+    </table>
+    <label>@copyright 2016-17|All Right Reserved|Metacube Training</label>
+  </center>
+ </body>
+</html>
