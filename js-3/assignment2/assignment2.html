@@ -1,0 +1,130 @@
+<html>
+    <head>
+      
+    </head>
+    <body>
+       <center>
+            <table style="border-bottom:1px solid;padding-top:30px " width=800px >
+              <tr>
+                 <td><img src="html5-1920x1200.png" width="100px"></td>
+                 <td width=400px></td>
+                <td>
+                  <nav>
+                    <a href="#">HTML</a> |
+                    <a href="#">CSS</a> |
+                    <a href="#">JavaScript</a> |
+                    <a href="#">jQuery</a>
+                  </nav>
+                </td>
+              </tr>
+            </table>
+            <img src="contact_us_banner1.jpg" width="700">
+            </br></br>
+            <form >
+              <table>
+                <tr>
+                   <td>
+                    <label >Name </label>
+                   </td>	
+                   <td>
+                    <input  type="text" name="name" id="name">
+                   </td>
+                </tr>
+                <tr>
+                 <td >
+                  <label >Email</label>
+                 </td>
+                 <td>
+                  <input  type="text" name="email" id="email">
+                 </td>
+                </tr>
+                <tr>
+                 <td>
+                  <label>city</label>
+                 </td>
+                 <td >
+                  <select id="city">
+                  <option>jaipur</option>
+                  <option>jodhpur</option>
+                  <option>ajmer</option>
+                  <option>kota</option>
+                  </select>
+                 </td>
+                </tr>
+                <tr>
+                 <td>
+                  <label>Organization </br>name</label>
+                 </td>
+                 <td >
+                  <input  type="text"  id="org">
+                 </td>
+                </tr>
+                <tr>
+                 <td >
+                  <label >Contact </br> Numbert</label>
+                 </td>
+                 <td>
+                  <input type="text" id="contact">
+                 </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label>Message</label>
+                  </td>
+                  <td>
+                    <textarea  id="message" name="comments" maxlength="1000" cols="25" rows="3"></textarea>
+                 </td>
+                </tr>
+                <tr>
+                 <td colspan="2">
+                  <input type="submit" onclick="getLocalStorage()">   
+                 </td>
+                 <tr>
+                  <td colspan="2">
+                  <input type="submit" value="  Clear  " onclick="clearLocalStorage()">   
+                 </td>
+                 </tr>
+                </tr>
+              </table>
+            </form>
+            <table style="border-bottom:1px solid" width="800px"></table>
+            <label>@copyright 2016-17|All Right Reserved|Metacube Training</label>
+
+
+
+            <script type="text/javascript">
+
+        document.getElementById("name").value = localStorage.getItem("name");
+        document.getElementById("email").value = localStorage.getItem("email");
+        document.getElementById("city").value = localStorage.getItem("city");   
+        document.getElementById("org").value = localStorage.getItem("organization");
+        document.getElementById("contact").value = localStorage.getItem("contact");
+        document.getElementById("message").value = localStorage.getItem("message");
+
+        function getLocalStorage(){ 
+            if (typeof(Storage) !== "undefined") {
+                // Store
+              localStorage.setItem("name", document.getElementById("name").value);
+              localStorage.setItem("email", document.getElementById("email").value);
+              //localStorage.setItem("city", document.getElementById("cityName").value);
+              
+              var city = document.getElementById("city");
+              var option = city.options[city.selectedIndex].value;
+              localStorage['city'] = option;
+              
+              localStorage.setItem("organization", document.getElementById("org").value);
+              localStorage.setItem("contact", document.getElementById("contact").value);
+              localStorage.setItem("message", document.getElementById("message").value);
+            
+            }
+        }
+
+        function clearLocalStorage(){
+          window.localStorage.clear();
+          //document.getElementById("result").innerHTML = localStorage.getItem("name");
+        } 
+        
+      </script>>
+        </center>
+    </body>
+</html>

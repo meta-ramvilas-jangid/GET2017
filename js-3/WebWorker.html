@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>WebWorker</title>
+	</head>
+	<body>
+		<p>Click the button and wait for 10 seconds to display current stamp.</p>
+		<button onclick="timedCount()">Try it</button>
+		<label id="timeStampId"></label>
+		<script>
+			function timedCount() {
+		  	    setTimeout(	function(){  
+				var dt = new Date();
+				var utcDate = dt.toUTCString(); 
+				document.getElementById('timeStampId').innerHTML = utcDate;
+				alert(utcDate); }, 10000);
+			}
+		</script>
+	</body>
+</html>
