@@ -1,0 +1,26 @@
+import java.rmi.RemoteException;
+
+import javax.xml.rpc.ServiceException;
+
+import DefaultNamespace.FahrenheitToCelcius;
+import DefaultNamespace.FahrenheitToCelciusServiceLocator;
+
+public class FahrenheitToCelciusClient {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		FahrenheitToCelciusServiceLocator locator =new FahrenheitToCelciusServiceLocator();
+		locator.setFahrenheitToCelciusEndpointAddress("http://localhost:8080/TempConvertor/services/FahrenheitToCelcius");
+
+		try {
+			FahrenheitToCelcius result=locator.getFahrenheitToCelcius();
+			Double celcius=result.fahrenheitToCelciusConvertor(97.5);
+			System.out.println( Math.round(celcius * 100.0) / 100.0);
+			
+		} catch (ServiceException | RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}

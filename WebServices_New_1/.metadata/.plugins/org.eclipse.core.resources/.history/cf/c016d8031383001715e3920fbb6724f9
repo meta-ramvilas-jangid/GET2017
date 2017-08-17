@@ -1,0 +1,30 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+
+public class FahrenheitToCelciusClientTest {
+	private static final double DELTA=1e-15;
+	@Test
+	public void testMain() {
+		
+		double d=FahrenheitToCelciusClient.main(98.6);
+		assertEquals(37.0, d,DELTA);
+	
+	}
+	@Test
+	public void testMain1() {
+			
+			double d=FahrenheitToCelciusClient.main(32.0);
+			assertEquals(0, d,DELTA);
+		
+		}
+		@Test
+	public void testMain2() {
+		
+		double d=FahrenheitToCelciusClient.main(-12.2);
+		assertEquals(0, d,DELTA);
+	
+	}
+
+}
