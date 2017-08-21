@@ -1,0 +1,240 @@
+
+1.Display Product
+2.Buy Product
+3.Cart
+4.Exit
+1
+rrrrrrrrrrrr
+
+################################################################################################################################
+				 Products List 				
+
+Product Id : 1001  -->  Reebok Sneakers(White)  -->  Foot wear  -->  Rs 749.0
+Product Id : 1002  -->  Reebok T-Shirt (Black)  -->  Top wear  -->  Rs 479.0
+Product Id : 4011  -->  Reebok Shirt (Blue)  -->  Top wear  -->  Rs 1649.0
+
+
+################################################################################################################################
+
+
+1.Display Product
+2.Buy Product
+3.Cart
+4.Exit
+3
+1.Display Cart
+2.Remove Product From Cart
+3.Edit Product in Cart
+4.Checkout
+5.Back
+1
+
+----------Cart is Empty---------
+---------Buy some Product----------
+
+1.Display Cart
+2.Remove Product From Cart
+3.Edit Product in Cart
+4.Checkout
+5.Back
+2
+
+
+$$$$$$$Cart Is Empty$$$$$$$
+
+
+1.Display Cart
+2.Remove Product From Cart
+3.Edit Product in Cart
+4.Checkout
+5.Back
+3
+
+
+$$$$$$$Cart Is Empty$$$$$$$
+
+
+1.Display Cart
+2.Remove Product From Cart
+3.Edit Product in Cart
+4.Checkout
+5.Back
+4
+
+$$$$$$$$$$$No Product Available in Cart for Checkout$$$$$$$$$$
+
+1.Display Cart
+2.Remove Product From Cart
+3.Edit Product in Cart
+4.Checkout
+5.Back
+5
+
+1.Display Product
+2.Buy Product
+3.Cart
+4.Exit
+1
+rrrrrrrrrrrr
+
+################################################################################################################################
+				 Products List 				
+
+Product Id : 1001  -->  Reebok Sneakers(White)  -->  Foot wear  -->  Rs 749.0
+Product Id : 1002  -->  Reebok T-Shirt (Black)  -->  Top wear  -->  Rs 479.0
+Product Id : 4011  -->  Reebok Shirt (Blue)  -->  Top wear  -->  Rs 1649.0
+
+
+################################################################################################################################
+
+
+1.Display Product
+2.Buy Product
+3.Cart
+4.Exit
+2
+Enter Number of Product :- 
+3
+Enter 1 Product Id
+1001
+Enter product Quantity
+2
+Added
+Enter 2 Product Id
+1005
+Enter Valid Product Id
+1002
+Enter product Quantity
+4
+Added
+Enter 3 Product Id
+4011
+Enter product Quantity
+16
+Added
+
+1.Display Product
+2.Buy Product
+3.Cart
+4.Exit
+3
+1.Display Cart
+2.Remove Product From Cart
+3.Edit Product in Cart
+4.Checkout
+5.Back
+1
+
+------------------------Your Products in cart------------------------
+
+1001  -->  Reebok Sneakers(White)  -->  Price = Rs 749.0  -->  Quantity = 2 untis  -->  Total Amount : 749.0 * 2 = Rs 1498.0
+1002  -->  Reebok T-Shirt (Black)  -->  Price = Rs 479.0  -->  Quantity = 4 untis  -->  Total Amount : 479.0 * 4 = Rs 1916.0
+4011  -->  Reebok Shirt (Blue)  -->  Price = Rs 1649.0  -->  Quantity = 16 untis  -->  Total Amount : 1649.0 * 16 = Rs 26384.0
+
+1.Display Cart
+2.Remove Product From Cart
+3.Edit Product in Cart
+4.Checkout
+5.Back
+1
+
+------------------------Your Products in cart------------------------
+
+1001  -->  Reebok Sneakers(White)  -->  Price = Rs 749.0  -->  Quantity = 2 untis  -->  Total Amount : 749.0 * 2 = Rs 1498.0
+1002  -->  Reebok T-Shirt (Black)  -->  Price = Rs 479.0  -->  Quantity = 4 untis  -->  Total Amount : 479.0 * 4 = Rs 1916.0
+4011  -->  Reebok Shirt (Blue)  -->  Price = Rs 1649.0  -->  Quantity = 16 untis  -->  Total Amount : 1649.0 * 16 = Rs 26384.0
+
+1.Display Cart
+2.Remove Product From Cart
+3.Edit Product in Cart
+4.Checkout
+5.Back
+2
+Enter Product Id - 
+ram
+Error ---> Enter Integer Value:
+Enter Product Id - 
+Error ---> Enter Integer Value:
+Enter Product Id - 
+1001
+Removed
+1.Display Cart
+2.Remove Product From Cart
+3.Edit Product in Cart
+4.Checkout
+5.Back
+1
+
+------------------------Your Products in cart------------------------
+
+1002  -->  Reebok T-Shirt (Black)  -->  Price = Rs 479.0  -->  Quantity = 4 untis  -->  Total Amount : 479.0 * 4 = Rs 1916.0
+4011  -->  Reebok Shirt (Blue)  -->  Price = Rs 1649.0  -->  Quantity = 16 untis  -->  Total Amount : 1649.0 * 16 = Rs 26384.0
+
+1.Display Cart
+2.Remove Product From Cart
+3.Edit Product in Cart
+4.Checkout
+5.Back
+3
+Enter Product Id - 
+1002
+Enter new Quantity of Product
+3
+Updated
+1.Display Cart
+2.Remove Product From Cart
+3.Edit Product in Cart
+4.Checkout
+5.Back
+1
+
+------------------------Your Products in cart------------------------
+
+1002  -->  Reebok T-Shirt (Black)  -->  Price = Rs 479.0  -->  Quantity = 3 untis  -->  Total Amount : 479.0 * 3 = Rs 1437.0
+4011  -->  Reebok Shirt (Blue)  -->  Price = Rs 1649.0  -->  Quantity = 16 untis  -->  Total Amount : 1649.0 * 16 = Rs 26384.0
+
+1.Display Cart
+2.Remove Product From Cart
+3.Edit Product in Cart
+4.Checkout
+5.Back
+4
+Enter your Name :
+ramvilas
+
+##########################################################################################
+
+  Your Order ramvilas 
+
+##########################################################################################
+
+PURCHASE PRODUCTS :
+
+Product : 1002 - Reebok T-Shirt (Black)(Top wear)
+Cost : Rs 1437.0(3 X 479.0)
+
+Product : 4011 - Reebok Shirt (Blue)(Top wear)
+Cost : Rs 26384.0(16 X 1649.0)
+
+
+SubTotal : 27821.0
+
+##########################################################################################
+  THANK YOU 
+##########################################################################################
+
+1.Display Cart
+2.Remove Product From Cart
+3.Edit Product in Cart
+4.Checkout
+5.Back
+4
+
+$$$$$$$$$$$No Product Available in Cart for Checkout$$$$$$$$$$
+
+1.Display Cart
+2.Remove Product From Cart
+3.Edit Product in Cart
+4.Checkout
+5.Back
+3
